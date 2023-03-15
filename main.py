@@ -23,7 +23,7 @@ class ChatBot (discord.Client):
 
         response = openai.ChatCompletion.create(
             model="gpt-4",
-            messages=[{"role": " ee ", “content”: input_content}]
+            messages=[{"role": "user", “content”: input_content}]
         )
 
         assistant_response = response['choices'][0]['message']['content']
